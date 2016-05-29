@@ -1,0 +1,371 @@
+*{
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+body,html{
+	height: 100%;
+	width: 100%;
+}
+body{
+	/*background-color: #ddd;*/
+	background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.55) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.55) 75%, rgba(0,0,0,0.55)), linear-gradient(45deg, rgba(0,0,0,.55) 25%, transparent 25%, transparent 75%, rgba(0,0,0,0.55) 75%, rgba(0,0,0,0.55));
+	background-image: -webkit-linear-gradient(45deg, rgba(0, 0, 0, 0.55) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.55) 75%, rgba(0,0,0,0.55)), linear-gradient(45deg, rgba(0,0,0,.55) 25%, transparent 25%, transparent 75%, rgba(0,0,0,0.55) 75%, rgba(0,0,0,0.55));
+	background-size: 10px 10px;
+    background-position: 0 0, 5px 5px;
+}
+/* Contenedor principal */
+.main{
+	border: 9px solid #111;
+	border-left-color: #323232;
+	border-right-color: #323232;
+    border-radius: 3px;
+	height: 300px;
+	margin: auto;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 600px;
+	background-color: rgba(43, 97, 119, 1);
+	box-shadow: 0 0 38px rgba(32, 40, 48, 0.64);
+}
+.bosque{
+	height: 150px;
+	width: 600px;
+	position: absolute;
+	background-image: url(img/fondo.png);
+	left: 0;
+	top: 0;
+	-webkit-animation: fondo1 15s infinite linear;
+	animation: fondo1 15s infinite linear;
+}
+.arboleda{
+	height: 150px;
+	width: 600px;
+	position: absolute;
+	background-image: url(img/arboleda.png);
+	background-size: cover;
+	left: 0;
+	bottom:-4px;
+	z-index: 6;
+	-webkit-animation: fondo1 12s infinite linear;
+	animation: fondo1 12s infinite linear;
+}
+
+/* Animacion arboles bosque */
+@keyframes fondo1{
+	to{background-position: -600px 0;}
+}
+@-webkit-keyframes fondo1{
+	to{background-position: -600px 0;}
+}
+
+.camino{
+	height: 150px;
+	position: absolute;
+	height: 150px;
+	top: 150px;
+	width: 600px;
+}
+.camino1{
+	background-image: url(img/path.png);
+	background-size: 100%;
+	background-repeat: repeat-x;
+	height: 150px;
+	-webkit-animation: camino1 13s infinite linear;
+	animation: camino1 13s infinite linear;
+	position: relative;
+	left: 0;
+	top: -28px;
+}
+@keyframes camino1{
+	to{background-position: -600px 0;}
+}
+@-webkit-keyframes camino1{
+	to{background-position: -600px 0;}
+}
+.camino2{
+	background-image: url(img/path.png);
+	background-position: cover;
+	background-size: 100%;
+	background-repeat: repeat-x;
+	height: 150px;
+	-webkit-animation: camino2 30s infinite;
+	animation: camino2 30s infinite;
+	position: relative;
+	top: -170px;
+}
+@keyframes camino2{
+	from{
+		left: 600px;
+	}
+	to{
+		left: 0;
+	}
+}
+@-webkit-keyframes camino2{
+	from{
+		left: 600px;
+	}
+	to{
+		left: 0;
+	}
+}
+.caperucitaRoja{
+	position: absolute;
+	height: 230px;
+	width: 80px;
+	top: -145px;
+	left: 90px;
+}
+.caperucitaRoja > div{position: absolute;}
+.cabeza{
+	width: 102px;
+	height: 117px;
+	right: 0px;
+	top: 0px;
+	z-index: 4;
+	animation: cabeza 1s infinite, rostro 17s infinite linear;
+	-webkit-animation: cabeza 1s infinite, rostro 17s infinite linear;
+	background-image: url(img/head1.png);
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+@keyframes cabeza{
+	50%{
+		top: 3px;
+	}
+}
+@-webkit-keyframes cabeza{
+	50%{
+		top: 3px;
+	}
+}
+@keyframes rostro{
+	0%, 29.9%, 85.1%{
+		background-image: url(img/head1.png);
+		background-size: contain;
+		background-position: center;
+	}
+	30%, 50%{
+		background-image: url(img/head3.png);
+	    background-size: 83%;
+    	background-position: 18px 4px;
+	}
+	50.1%, 85%{
+		background-image: url(img/head2.png);
+		background-size: contain;
+		background-position: center;
+	}
+}
+@-webkit-keyframes rostro{
+	0%, 29.9%, 85.1%{
+		background-image: url(img/head1.png);
+		background-size: contain;
+		background-position: center;
+	}
+	30%, 50%{
+		background-image: url(img/head3.png);
+	    background-size: 83%;
+    	background-position: 18px 4px;
+	}
+	50.1%, 85%{
+		background-image: url(img/head2.png);
+		background-size: contain;
+		background-position: center;
+	}
+}
+.cuerpo{
+	height: 73px;
+	width: 52px;
+	right: 13px;
+	top: 88px;
+	z-index: 2;
+	background-image: url(img/body.png);
+	background-size: cover;
+}
+.capa{
+	width: 70px;
+	height: 50px;
+	top: 87px;
+    right: 7px;
+	z-index: 3;
+	background-image: url(img/cape.png);
+	background-size: cover;
+}
+.cesta{
+	height: 60px;
+	width: 36px;
+	right: 12px;
+	top: 114px;
+	z-index: 4;
+	animation: cesta 1s infinite;
+	-webkit-animation: cesta 1s infinite;
+	background-image: url(img/basket.png);
+	background-size: cover;
+}
+@keyframes cesta{
+	50%{
+		top: 117px;
+	}
+}
+@-webkit-keyframes cesta{
+	50%{
+		top: 117px;
+	}
+}
+.leg1{
+	height: 35px;
+	right: 41px;
+	bottom: 44px;
+	z-index: 0;
+	width: 15px;
+	background-image: url(img/upperleg.png);
+	background-size: cover;
+	animation: leg 2s infinite linear;
+	transform-origin: top center;
+}
+@keyframes leg{
+	0%, 50%, 100%{
+		transform: rotate(0);
+	}
+	25%{
+		transform: rotate(-10deg);
+	}
+	75%{
+		transform: rotate(35deg);
+	}
+}
+.leg2{
+	right: 20px;
+	bottom: 44px;
+	width: 15px;
+	height: 35px;
+	z-index: 0;
+	background-image: url(img/upperleg.png);
+	background-size: cover;
+	animation: leg 2s infinite linear reverse;
+	transform-origin: top center;
+}
+.leg3{
+	height: 33px;
+	right: 41px;
+	bottom: 20px;
+	width: 15px;
+	z-index: 1;
+	background-image: url(img/loweleg.png);
+	background-size: cover;
+	animation: subleg 2s infinite linear;
+	transform-origin: top center;
+}
+.leg4{
+	height: 33px;
+	right: 20px;
+	bottom: 20px;
+	width: 15px;
+	z-index: 1;
+	background-image: url(img/loweleg.png);
+	background-size: cover;
+	animation: subleg 2s infinite linear reverse;
+	transform-origin: top center;
+}
+@keyframes subleg{
+	0%, 50%, 100%{
+		transform: rotate(0);
+	}
+	25%{
+		transform: rotate(-12deg) translate3d(4px,-3px,0);
+	}
+	75%{
+		transform: rotate(69deg) translate3d(-7px, 10px, 0);
+	}
+	80%, 83%{
+		transform: rotate(90deg) translate3d(-2px, 8px, 0);
+	}
+}
+.shoe1{
+	bottom: 17px;
+	right: 34px;
+	height: 10px;
+	z-index: 2;
+	width: 24px;
+	background-image: url(img/shoe.png);
+	background-size: cover;
+	animation: shoe 2s infinite linear;
+	transform-origin: top center;
+
+}
+.shoe2{
+	bottom: 17px;
+	right: 14px;
+	width: 24px;
+	height: 10px;
+	z-index: 2;
+	background-image: url(img/shoe.png);
+	background-size: cover;
+	animation: shoe 2s infinite linear reverse;
+	transform-origin: top center;
+}
+@keyframes shoe{
+	0%, 50%, 100%{
+		transform: rotate(0);
+	}
+	25%{
+		transform: rotate(-10deg) translate3d(11px,-6px,0);
+	}
+	75%{
+		transform: rotate(76deg) translate3d(-28px, 36px, 0);
+	}
+	80%, 83%{
+		transform: rotate(90deg) translate3d(-19px, 35px, 0);
+	}
+}
+.eyes{
+	position: absolute;
+	top: 80px;
+	right: 100px;
+	width: 80px;
+	height: 15px;
+	/*background: yellow;*/
+}
+
+.eyes:before{
+	position: absolute;
+	height: 100%;
+	width: 48%;
+	left: 0;
+	border-radius: 7% 100% 13% 100%;
+	content: '';
+	background-color: yellow;
+	transform: rotate(14deg);
+	animation: showEyes 17s infinite linear;
+}
+
+.eyes:after{
+	position: absolute;
+	height: 100%;
+	width: 48%;
+	right: 0;
+	border-radius: 100% 7% 100% 13%;
+	content: '';
+	background-color: yellow;
+	transform: rotate(-14deg);
+	animation: showEyes 17s infinite linear;
+}
+@-webkit-keyframes showEyes{
+	0%, 24.9%, 55%, 100%{
+		opacity: 0;
+	}
+	25%, 29%, 50.1%, 54.9%{
+		opacity: .3;
+		box-shadow: 0 0 3px #DEDE09;
+	}
+	30%, 50%{
+		opacity: 1;
+		box-shadow: 0 0 8px #DEDE09;
+	}
+}

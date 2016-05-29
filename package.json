@@ -1,0 +1,22 @@
+{
+  "name": "test_animation",
+  "version": "1.0.0",
+  "description": "Animation made in pure CSS3",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmsanchez86/TestAnimation.git"
+  },
+  "keywords": [
+    "css3"
+  ],
+  "author": "Daniel M. Sanchez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dmsanchez86/TestAnimation/issues"
+  },
+  "homepage": "https://github.com/dmsanchez86/TestAnimation#readme"
+}
