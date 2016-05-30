@@ -195,7 +195,7 @@ body{
 	background-image: url(img/basket.png);
 	background-size: cover;
 }
-
+/* Animacion de la cesta */
 @-webkit-keyframes cesta{
 	50%{ top: 117px; }
 }
@@ -220,20 +220,21 @@ body{
 	transform-origin: top center;
 }
 
+/* Animacion para las piernas principales */
 @-webkit-keyframes leg{
-	0%, 50%, 100%{ transform: rotate(0); }
-	25%{ transform: rotate(-10deg);	}
-	75%{ transform: rotate(35deg); }
+	0%, 50%, 100%{ transform: rotate(0);-webkit-transform: rotate(0);-moz-transform: rotate(0); }
+	25%{ transform: rotate(-10deg);-webkit-transform: rotate(-10deg);-moz-transform: rotate(-10deg);	}
+	75%{ transform: rotate(35deg);-webkit-transform: rotate(35deg);-moz-transform: rotate(35deg); }
 }
 @-moz-keyframes leg{
-	0%, 50%, 100%{ transform: rotate(0); }
-	25%{ transform: rotate(-10deg);	}
-	75%{ transform: rotate(35deg); }
+	0%, 50%, 100%{ transform: rotate(0);-webkit-transform: rotate(0);-moz-transform: rotate(0); }
+	25%{ transform: rotate(-10deg);-webkit-transform: rotate(-10deg);-moz-transform: rotate(-10deg);	}
+	75%{ transform: rotate(35deg);-webkit-transform: rotate(35deg);-moz-transform: rotate(35deg); }
 }
 @keyframes leg{
-	0%, 50%, 100%{ transform: rotate(0); }
-	25%{ transform: rotate(-10deg);	}
-	75%{ transform: rotate(35deg); }
+	0%, 50%, 100%{ transform: rotate(0);-webkit-transform: rotate(0);-moz-transform: rotate(0); }
+	25%{ transform: rotate(-10deg);-webkit-transform: rotate(-10deg);-moz-transform: rotate(-10deg);	}
+	75%{ transform: rotate(35deg);-webkit-transform: rotate(35deg);-moz-transform: rotate(35deg); }
 }
 
 .leg2{
@@ -247,6 +248,8 @@ body{
 	-webkit-animation: leg 2s infinite linear reverse;
 	-moz-animation: leg 2s infinite linear reverse;
 	animation: leg 2s infinite linear reverse;
+	-webkit-transform-origin: top center;
+	-moz-transform-origin: top center;
 	transform-origin: top center;
 }
 .leg3{
@@ -260,6 +263,8 @@ body{
 	-webkit-animation: subleg 2s infinite linear;
 	-moz-animation: subleg 2s infinite linear;
 	animation: subleg 2s infinite linear;
+	-webkit-transform-origin: top center;
+	-moz-transform-origin: top center;
 	transform-origin: top center;
 }
 .leg4{
@@ -273,26 +278,28 @@ body{
 	-webkit-animation: subleg 2s infinite linear reverse;
 	-moz-animation: subleg 2s infinite linear reverse;
 	animation: subleg 2s infinite linear reverse;
+	-webkit-transform-origin: top center;
+	-moz-transform-origin: top center;
 	transform-origin: top center;
 }
 
 @-webkit-keyframes subleg{
-	0%, 50%, 100%{ transform: rotate(0); }
-	25%{ transform: rotate(-12deg) translate3d(4px,-3px,0); }
-	75%{ transform: rotate(69deg) translate3d(-7px, 10px, 0); }
-	80%, 83%{ transform: rotate(90deg) translate3d(-2px, 8px, 0); }
+	0%, 50%, 100%{ transform: rotate(0);-webkit-transform: rotate(0);-moz-transform: rotate(0); }
+	25%{ transform: rotate(-12deg) translate3d(4px,-3px,0);-webkit-transform: rotate(-12deg) translate3d(4px,-3px,0);-moz-transform: rotate(-12deg) translate3d(4px,-3px,0); }
+	75%{ transform: rotate(69deg) translate3d(-7px, 10px, 0);-webkit-transform: rotate(69deg) translate3d(-7px, 10px, 0);-moz-transform: rotate(69deg) translate3d(-7px, 10px, 0); }
+	80%, 83%{ transform: rotate(90deg) translate3d(-2px, 8px, 0);-webkit-transform: rotate(90deg) translate3d(-2px, 8px, 0);-moz-transform: rotate(90deg) translate3d(-2px, 8px, 0); }
 }
 @-moz-keyframes subleg{
-	0%, 50%, 100%{ transform: rotate(0); }
-	25%{ transform: rotate(-12deg) translate3d(4px,-3px,0); }
-	75%{ transform: rotate(69deg) translate3d(-7px, 10px, 0); }
-	80%, 83%{ transform: rotate(90deg) translate3d(-2px, 8px, 0); }
+	0%, 50%, 100%{ transform: rotate(0);-webkit-transform: rotate(0);-moz-transform: rotate(0); }
+	25%{ transform: rotate(-12deg) translate3d(4px,-3px,0);-webkit-transform: rotate(-12deg) translate3d(4px,-3px,0);-moz-transform: rotate(-12deg) translate3d(4px,-3px,0); }
+	75%{ transform: rotate(69deg) translate3d(-7px, 10px, 0);-webkit-transform: rotate(69deg) translate3d(-7px, 10px, 0);-moz-transform: rotate(69deg) translate3d(-7px, 10px, 0); }
+	80%, 83%{ transform: rotate(90deg) translate3d(-2px, 8px, 0);-webkit-transform: rotate(90deg) translate3d(-2px, 8px, 0);-moz-transform: rotate(90deg) translate3d(-2px, 8px, 0); }
 }
 @keyframes subleg{
-	0%, 50%, 100%{ transform: rotate(0); }
-	25%{ transform: rotate(-12deg) translate3d(4px,-3px,0); }
-	75%{ transform: rotate(69deg) translate3d(-7px, 10px, 0); }
-	80%, 83%{ transform: rotate(90deg) translate3d(-2px, 8px, 0); }
+	0%, 50%, 100%{ transform: rotate(0);-webkit-transform: rotate(0);-moz-transform: rotate(0); }
+	25%{ transform: rotate(-12deg) translate3d(4px,-3px,0);-webkit-transform: rotate(-12deg) translate3d(4px,-3px,0);-moz-transform: rotate(-12deg) translate3d(4px,-3px,0); }
+	75%{ transform: rotate(69deg) translate3d(-7px, 10px, 0);-webkit-transform: rotate(69deg) translate3d(-7px, 10px, 0);-moz-transform: rotate(69deg) translate3d(-7px, 10px, 0); }
+	80%, 83%{ transform: rotate(90deg) translate3d(-2px, 8px, 0);-webkit-transform: rotate(90deg) translate3d(-2px, 8px, 0);-moz-transform: rotate(90deg) translate3d(-2px, 8px, 0); }
 }
 
 .shoe1{
@@ -306,6 +313,8 @@ body{
 	-webkit-animation: shoe 2s infinite linear;
 	-moz-animation: shoe 2s infinite linear;
 	animation: shoe 2s infinite linear;
+	-webkit-transform-origin: top center;
+	-moz-transform-origin: top center;
 	transform-origin: top center;
 
 }
@@ -320,26 +329,28 @@ body{
 	-webkit-animation: shoe 2s infinite linear reverse;
 	-moz-animation: shoe 2s infinite linear reverse;
 	animation: shoe 2s infinite linear reverse;
+	-webkit-transform-origin: top center;
+	-moz-transform-origin: top center;
 	transform-origin: top center;
 }
 
 @-webkit-keyframes shoe{
-	0%, 50%, 100%{ transform: rotate(0); }
-	25%{ transform: rotate(-10deg) translate3d(11px,-6px,0); }
-	75%{ transform: rotate(76deg) translate3d(-28px, 36px, 0); }
-	80%, 83%{ transform: rotate(90deg) translate3d(-19px, 35px, 0); }
+	0%, 50%, 100%{ transform: rotate(0);-webkit-transform: rotate(0);-moz-transform: rotate(0); }
+	25%{ transform: rotate(-10deg) translate3d(11px,-6px,0);-webkit-transform: rotate(-10deg) translate3d(11px,-6px,0);-moz-transform: rotate(-10deg) translate3d(11px,-6px,0); }
+	75%{ transform: rotate(76deg) translate3d(-28px, 36px, 0);-webkit-transform: rotate(76deg) translate3d(-28px, 36px, 0);-moz-transform: rotate(76deg) translate3d(-28px, 36px, 0); }
+	80%, 83%{ transform: rotate(90deg) translate3d(-19px, 35px, 0);-webkit-transform: rotate(90deg) translate3d(-19px, 35px, 0);-moz-transform: rotate(90deg) translate3d(-19px, 35px, 0); }
 }
 @-moz-keyframes shoe{
-	0%, 50%, 100%{ transform: rotate(0); }
-	25%{ transform: rotate(-10deg) translate3d(11px,-6px,0); }
-	75%{ transform: rotate(76deg) translate3d(-28px, 36px, 0); }
-	80%, 83%{ transform: rotate(90deg) translate3d(-19px, 35px, 0); }
+	0%, 50%, 100%{ transform: rotate(0);-webkit-transform: rotate(0);-moz-transform: rotate(0); }
+	25%{ transform: rotate(-10deg) translate3d(11px,-6px,0);-webkit-transform: rotate(-10deg) translate3d(11px,-6px,0);-moz-transform: rotate(-10deg) translate3d(11px,-6px,0); }
+	75%{ transform: rotate(76deg) translate3d(-28px, 36px, 0);-webkit-transform: rotate(76deg) translate3d(-28px, 36px, 0);-moz-transform: rotate(76deg) translate3d(-28px, 36px, 0); }
+	80%, 83%{ transform: rotate(90deg) translate3d(-19px, 35px, 0);-webkit-transform: rotate(90deg) translate3d(-19px, 35px, 0);-moz-transform: rotate(90deg) translate3d(-19px, 35px, 0); }
 }
 @keyframes shoe{
-	0%, 50%, 100%{ transform: rotate(0); }
-	25%{ transform: rotate(-10deg) translate3d(11px,-6px,0); }
-	75%{ transform: rotate(76deg) translate3d(-28px, 36px, 0); }
-	80%, 83%{ transform: rotate(90deg) translate3d(-19px, 35px, 0); }
+	0%, 50%, 100%{ transform: rotate(0);-webkit-transform: rotate(0);-moz-transform: rotate(0); }
+	25%{ transform: rotate(-10deg) translate3d(11px,-6px,0);-webkit-transform: rotate(-10deg) translate3d(11px,-6px,0);-moz-transform: rotate(-10deg) translate3d(11px,-6px,0); }
+	75%{ transform: rotate(76deg) translate3d(-28px, 36px, 0);-webkit-transform: rotate(76deg) translate3d(-28px, 36px, 0);-moz-transform: rotate(76deg) translate3d(-28px, 36px, 0); }
+	80%, 83%{ transform: rotate(90deg) translate3d(-19px, 35px, 0);-webkit-transform: rotate(90deg) translate3d(-19px, 35px, 0);-moz-transform: rotate(90deg) translate3d(-19px, 35px, 0); }
 }
 
 .eyes{
@@ -359,7 +370,11 @@ body{
 	border-radius: 7% 100% 13% 100%;
 	content: '';
 	background-color: yellow;
+	-webkit-transform: rotate(14deg);
+	-moz-transform: rotate(14deg);
 	transform: rotate(14deg);
+	-webkit-animation: showEyes 17s infinite linear;
+	-moz-animation: showEyes 17s infinite linear;
 	animation: showEyes 17s infinite linear;
 }
 
@@ -371,7 +386,11 @@ body{
 	border-radius: 100% 7% 100% 13%;
 	content: '';
 	background-color: yellow;
+	-webkit-transform: rotate(-14deg);
+	-moz-transform: rotate(-14deg);
 	transform: rotate(-14deg);
+	-webkit-animation: showEyes 17s infinite linear;
+	-moz-animation: showEyes 17s infinite linear;
 	animation: showEyes 17s infinite linear;
 }
 
