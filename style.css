@@ -11,6 +11,7 @@ body{
 	background-color: #ddd;
 	background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.55) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.55) 75%, rgba(0,0,0,0.55)), linear-gradient(45deg, rgba(0,0,0,.55) 25%, transparent 25%, transparent 75%, rgba(0,0,0,0.55) 75%, rgba(0,0,0,0.55));
 	background-image: -webkit-linear-gradient(45deg, rgba(0, 0, 0, 0.55) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.55) 75%, rgba(0,0,0,0.55)), linear-gradient(45deg, rgba(0,0,0,.55) 25%, transparent 25%, transparent 75%, rgba(0,0,0,0.55) 75%, rgba(0,0,0,0.55));
+	background-image: -moz-linear-gradient(45deg, rgba(0, 0, 0, 0.55) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.55) 75%, rgba(0,0,0,0.55)), linear-gradient(45deg, rgba(0,0,0,.55) 25%, transparent 25%, transparent 75%, rgba(0,0,0,0.55) 75%, rgba(0,0,0,0.55));
 	background-size: 10px 10px;
     background-position: 0 0, 5px 5px;
 }
@@ -40,6 +41,7 @@ body{
 	left: 0;
 	top: 0;
 	-webkit-animation: fondo1 15s infinite linear;
+	-moz-animation: fondo1 15s infinite linear;
 	animation: fondo1 15s infinite linear;
 }
 .arboleda{
@@ -52,14 +54,18 @@ body{
 	bottom:-4px;
 	z-index: 6;
 	-webkit-animation: fondo1 12s infinite linear;
+	-moz-animation: fondo1 12s infinite linear;
 	animation: fondo1 12s infinite linear;
 }
 
 /* Animacion arboles bosque */
-@keyframes fondo1{
+@-webkit-keyframes fondo1{
 	to{background-position: -600px 0;}
 }
-@-webkit-keyframes fondo1{
+@-moz-keyframes fondo1{
+	to{background-position: -600px 0;}
+}
+@keyframes fondo1{
 	to{background-position: -600px 0;}
 }
 
@@ -75,45 +81,24 @@ body{
 	background-size: 100%;
 	background-repeat: repeat-x;
 	height: 150px;
-	-webkit-animation: camino1 13s infinite linear;
-	animation: camino1 13s infinite linear;
 	position: relative;
 	left: 0;
 	top: -28px;
+	-webkit-animation: camino1 13s infinite linear;
+	-moz-animation: camino1 13s infinite linear;
+	animation: camino1 13s infinite linear;
+}
+
+@-webkit-keyframes camino1{
+	to{background-position: -600px 0;}
+}
+@-moz-keyframes camino1{
+	to{background-position: -600px 0;}
 }
 @keyframes camino1{
 	to{background-position: -600px 0;}
 }
-@-webkit-keyframes camino1{
-	to{background-position: -600px 0;}
-}
-.camino2{
-	background-image: url(img/path.png);
-	background-position: cover;
-	background-size: 100%;
-	background-repeat: repeat-x;
-	height: 150px;
-	-webkit-animation: camino2 30s infinite;
-	animation: camino2 30s infinite;
-	position: relative;
-	top: -170px;
-}
-@keyframes camino2{
-	from{
-		left: 600px;
-	}
-	to{
-		left: 0;
-	}
-}
-@-webkit-keyframes camino2{
-	from{
-		left: 600px;
-	}
-	to{
-		left: 0;
-	}
-}
+
 .caperucitaRoja{
 	position: absolute;
 	height: 230px;
@@ -179,6 +164,7 @@ body{
 		background-position: center;
 	}
 }
+
 .cuerpo{
 	height: 73px;
 	width: 52px;
@@ -203,21 +189,23 @@ body{
 	right: 12px;
 	top: 114px;
 	z-index: 4;
-	animation: cesta 1s infinite;
 	-webkit-animation: cesta 1s infinite;
+	-moz-animation: cesta 1s infinite;
+	animation: cesta 1s infinite;
 	background-image: url(img/basket.png);
 	background-size: cover;
 }
-@keyframes cesta{
-	50%{
-		top: 117px;
-	}
-}
+
 @-webkit-keyframes cesta{
-	50%{
-		top: 117px;
-	}
+	50%{ top: 117px; }
 }
+@-moz-keyframes cesta{
+	50%{ top: 117px; }
+}
+@keyframes cesta{
+	50%{ top: 117px; }
+}
+
 .leg1{
 	height: 35px;
 	right: 41px;
@@ -226,20 +214,28 @@ body{
 	width: 15px;
 	background-image: url(img/upperleg.png);
 	background-size: cover;
+	-webkit-animation: leg 2s infinite linear;
+	-moz-animation: leg 2s infinite linear;
 	animation: leg 2s infinite linear;
 	transform-origin: top center;
 }
-@keyframes leg{
-	0%, 50%, 100%{
-		transform: rotate(0);
-	}
-	25%{
-		transform: rotate(-10deg);
-	}
-	75%{
-		transform: rotate(35deg);
-	}
+
+@-webkit-keyframes leg{
+	0%, 50%, 100%{ transform: rotate(0); }
+	25%{ transform: rotate(-10deg);	}
+	75%{ transform: rotate(35deg); }
 }
+@-moz-keyframes leg{
+	0%, 50%, 100%{ transform: rotate(0); }
+	25%{ transform: rotate(-10deg);	}
+	75%{ transform: rotate(35deg); }
+}
+@keyframes leg{
+	0%, 50%, 100%{ transform: rotate(0); }
+	25%{ transform: rotate(-10deg);	}
+	75%{ transform: rotate(35deg); }
+}
+
 .leg2{
 	right: 20px;
 	bottom: 44px;
@@ -248,6 +244,8 @@ body{
 	z-index: 0;
 	background-image: url(img/upperleg.png);
 	background-size: cover;
+	-webkit-animation: leg 2s infinite linear reverse;
+	-moz-animation: leg 2s infinite linear reverse;
 	animation: leg 2s infinite linear reverse;
 	transform-origin: top center;
 }
@@ -259,6 +257,8 @@ body{
 	z-index: 1;
 	background-image: url(img/loweleg.png);
 	background-size: cover;
+	-webkit-animation: subleg 2s infinite linear;
+	-moz-animation: subleg 2s infinite linear;
 	animation: subleg 2s infinite linear;
 	transform-origin: top center;
 }
@@ -270,23 +270,31 @@ body{
 	z-index: 1;
 	background-image: url(img/loweleg.png);
 	background-size: cover;
+	-webkit-animation: subleg 2s infinite linear reverse;
+	-moz-animation: subleg 2s infinite linear reverse;
 	animation: subleg 2s infinite linear reverse;
 	transform-origin: top center;
 }
-@keyframes subleg{
-	0%, 50%, 100%{
-		transform: rotate(0);
-	}
-	25%{
-		transform: rotate(-12deg) translate3d(4px,-3px,0);
-	}
-	75%{
-		transform: rotate(69deg) translate3d(-7px, 10px, 0);
-	}
-	80%, 83%{
-		transform: rotate(90deg) translate3d(-2px, 8px, 0);
-	}
+
+@-webkit-keyframes subleg{
+	0%, 50%, 100%{ transform: rotate(0); }
+	25%{ transform: rotate(-12deg) translate3d(4px,-3px,0); }
+	75%{ transform: rotate(69deg) translate3d(-7px, 10px, 0); }
+	80%, 83%{ transform: rotate(90deg) translate3d(-2px, 8px, 0); }
 }
+@-moz-keyframes subleg{
+	0%, 50%, 100%{ transform: rotate(0); }
+	25%{ transform: rotate(-12deg) translate3d(4px,-3px,0); }
+	75%{ transform: rotate(69deg) translate3d(-7px, 10px, 0); }
+	80%, 83%{ transform: rotate(90deg) translate3d(-2px, 8px, 0); }
+}
+@keyframes subleg{
+	0%, 50%, 100%{ transform: rotate(0); }
+	25%{ transform: rotate(-12deg) translate3d(4px,-3px,0); }
+	75%{ transform: rotate(69deg) translate3d(-7px, 10px, 0); }
+	80%, 83%{ transform: rotate(90deg) translate3d(-2px, 8px, 0); }
+}
+
 .shoe1{
 	bottom: 17px;
 	right: 34px;
@@ -295,6 +303,8 @@ body{
 	width: 24px;
 	background-image: url(img/shoe.png);
 	background-size: cover;
+	-webkit-animation: shoe 2s infinite linear;
+	-moz-animation: shoe 2s infinite linear;
 	animation: shoe 2s infinite linear;
 	transform-origin: top center;
 
@@ -307,23 +317,31 @@ body{
 	z-index: 2;
 	background-image: url(img/shoe.png);
 	background-size: cover;
+	-webkit-animation: shoe 2s infinite linear reverse;
+	-moz-animation: shoe 2s infinite linear reverse;
 	animation: shoe 2s infinite linear reverse;
 	transform-origin: top center;
 }
-@keyframes shoe{
-	0%, 50%, 100%{
-		transform: rotate(0);
-	}
-	25%{
-		transform: rotate(-10deg) translate3d(11px,-6px,0);
-	}
-	75%{
-		transform: rotate(76deg) translate3d(-28px, 36px, 0);
-	}
-	80%, 83%{
-		transform: rotate(90deg) translate3d(-19px, 35px, 0);
-	}
+
+@-webkit-keyframes shoe{
+	0%, 50%, 100%{ transform: rotate(0); }
+	25%{ transform: rotate(-10deg) translate3d(11px,-6px,0); }
+	75%{ transform: rotate(76deg) translate3d(-28px, 36px, 0); }
+	80%, 83%{ transform: rotate(90deg) translate3d(-19px, 35px, 0); }
 }
+@-moz-keyframes shoe{
+	0%, 50%, 100%{ transform: rotate(0); }
+	25%{ transform: rotate(-10deg) translate3d(11px,-6px,0); }
+	75%{ transform: rotate(76deg) translate3d(-28px, 36px, 0); }
+	80%, 83%{ transform: rotate(90deg) translate3d(-19px, 35px, 0); }
+}
+@keyframes shoe{
+	0%, 50%, 100%{ transform: rotate(0); }
+	25%{ transform: rotate(-10deg) translate3d(11px,-6px,0); }
+	75%{ transform: rotate(76deg) translate3d(-28px, 36px, 0); }
+	80%, 83%{ transform: rotate(90deg) translate3d(-19px, 35px, 0); }
+}
+
 .eyes{
 	position: absolute;
 	top: 80px;
@@ -356,7 +374,34 @@ body{
 	transform: rotate(-14deg);
 	animation: showEyes 17s infinite linear;
 }
+
 @-webkit-keyframes showEyes{
+	0%, 24.9%, 55%, 100%{
+		opacity: 0;
+	}
+	25%, 29%, 50.1%, 54.9%{
+		opacity: .3;
+		box-shadow: 0 0 3px #DEDE09;
+	}
+	30%, 50%{
+		opacity: 1;
+		box-shadow: 0 0 8px #DEDE09;
+	}
+}
+@-moz-keyframes showEyes{
+	0%, 24.9%, 55%, 100%{
+		opacity: 0;
+	}
+	25%, 29%, 50.1%, 54.9%{
+		opacity: .3;
+		box-shadow: 0 0 3px #DEDE09;
+	}
+	30%, 50%{
+		opacity: 1;
+		box-shadow: 0 0 8px #DEDE09;
+	}
+}
+@keyframes showEyes{
 	0%, 24.9%, 55%, 100%{
 		opacity: 0;
 	}
